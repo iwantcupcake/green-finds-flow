@@ -180,7 +180,7 @@ export const Marketplace: React.FC = () => {
                   
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-2xl font-bold text-eco-primary">
-                      ${product.price}
+                      ₹{product.price}
                     </span>
                     <span className="text-sm text-muted-foreground">
                       by {product.userName}

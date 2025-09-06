@@ -26,7 +26,7 @@ export const Cart: React.FC = () => {
     // Mock checkout process
     toast({
       title: "Order placed successfully!",
-      description: `Your order of ${totalItems} items for $${totalPrice.toFixed(2)} has been placed.`,
+      description: `Your order of ${totalItems} items for ₹${totalPrice.toFixed(2)} has been placed.`,
     });
     
     clearCart();
@@ -150,11 +150,11 @@ export const Cart: React.FC = () => {
                           
                           <div className="text-right">
                             <p className="text-lg font-bold text-eco-primary">
-                              ${(item.price * item.quantity).toFixed(2)}
+                              ₹{(item.price * item.quantity).toFixed(2)}
                             </p>
                             {item.quantity > 1 && (
                               <p className="text-sm text-muted-foreground">
-                                ${item.price.toFixed(2)} each
+                                ₹{item.price.toFixed(2)} each
                               </p>
                             )}
                           </div>
@@ -172,10 +172,10 @@ export const Cart: React.FC = () => {
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-foreground mb-4">Order Summary</h3>
                   
-                  <div className="space-y-3 mb-6">
+                    <div className="space-y-3 mb-6">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Items ({totalItems})</span>
-                      <span className="font-medium">${totalPrice.toFixed(2)}</span>
+                      <span className="font-medium">₹{totalPrice.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Shipping</span>
@@ -185,7 +185,7 @@ export const Cart: React.FC = () => {
                       <div className="flex justify-between">
                         <span className="text-lg font-semibold">Total</span>
                         <span className="text-lg font-bold text-eco-primary">
-                          ${totalPrice.toFixed(2)}
+                          ₹{totalPrice.toFixed(2)}
                         </span>
                       </div>
                     </div>
