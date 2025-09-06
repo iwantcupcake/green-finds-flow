@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-[all] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -15,6 +15,11 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // EcoFinds custom variants
+        eco: "bg-eco-primary text-white hover:bg-eco-primary-dark transform hover:scale-105 shadow-eco hover:shadow-hover",
+        "eco-outline": "border-2 border-eco-primary text-eco-primary bg-transparent hover:bg-eco-primary hover:text-white",
+        "eco-ghost": "text-eco-primary hover:bg-eco-primary/10 hover:text-eco-primary-dark",
+        hero: "bg-gradient-to-r from-eco-primary to-eco-secondary text-white hover:from-eco-primary-dark hover:to-eco-primary transform hover:scale-105 shadow-lg hover:shadow-xl",
       },
       size: {
         default: "h-10 px-4 py-2",

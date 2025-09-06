@@ -47,6 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // EcoFinds custom colors
+        eco: {
+          primary: "hsl(var(--eco-primary))",
+          "primary-light": "hsl(var(--eco-primary-light))",
+          "primary-dark": "hsl(var(--eco-primary-dark))",
+          secondary: "hsl(var(--eco-secondary))",
+          accent: "hsl(var(--eco-accent))",
+          neutral: "hsl(var(--eco-neutral))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
